@@ -23,7 +23,10 @@ public class Spreadsheet {
     public static MaybeValue get(String name){
        return SHEET.getCell(name).getMvalue(); 
     }
+    public static void clear(){
+        SHEET.clear();
+    }
     public static Expression plus(double a, double b){
-        
+        return new Expression();
     }
 }

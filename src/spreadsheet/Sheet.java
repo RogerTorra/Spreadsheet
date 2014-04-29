@@ -18,9 +18,9 @@ public class Sheet {
     int rows, cols;
     Map<String, Cell> Cells;
     public Sheet(int size) {
-        this.rows = rows;
-        this.cols = cols;
-        Cells = new HashMap<String, Cell>();
+        this.rows = size;
+        this.cols = size;
+        Cells = new HashMap<>();
     }
     public void setCell(String name,double value){
         Cell nCell = new Cell(value);
@@ -33,6 +33,9 @@ public class Sheet {
     public Cell getCell(String name){
         return Cells.get(name);
     }
-
+    
+    public void clear(){
+        Cells.clear();
+    }
    
 }
